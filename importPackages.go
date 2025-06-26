@@ -2,7 +2,7 @@ package main
 
 import {
 	"fmt"
-	"GO/utils"
+	"utils"
 }
 
 func main() {

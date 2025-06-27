@@ -1,4 +1,4 @@
-module example/hello
+module urlBookmark
 
 go 1.20
 

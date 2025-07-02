@@ -12,6 +12,7 @@ func main() {
 
 	r := gin.Default()
 	r.POST("/short",handler.Shortner)
+	r.GET(":hash",handler.Redirect)
 
 	r.Run(":8080")
 

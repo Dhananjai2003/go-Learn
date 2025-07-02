@@ -11,7 +11,7 @@ var DB *sql.DB
 func Connect() {
 
 	var err error
-	connStr := "user=dhn password=mypassword dbname=urlshortner sslmode=disable"
+	connStr := "user=dhn password=myPassword dbname=urlshortner sslmode=disable"
 	DB, err = sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)

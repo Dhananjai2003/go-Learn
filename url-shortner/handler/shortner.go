@@ -4,6 +4,7 @@ import (
 	"url-shortner/db"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"url-shortner/utils"
 )
 
 func Shortner(c *gin.Context) {
@@ -17,7 +18,7 @@ func Shortner(c *gin.Context) {
 		return
 	}
 	
-	code := "testingCode"
+	code := utils.CodeGenrator()
 
 	_, err := db.DB.Exec("INSERT INTO urls (hash, url) values ($1, $2)",code,req.Url)
 	if err != nil {
